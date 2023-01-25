@@ -1,1 +1,36 @@
-<p>quotes-list works!</p>
+<div class="quotes-list padding-tb-24">
+  <!--<input type="text" name="username" [(ngModel)]="username">-->
+
+  <!--<table>-->
+  <!--  <tr>-->
+  <!--    <th>ID</th>-->
+  <!--    <th> Quote Text</th>-->
+  <!--  </tr>-->
+  <!--  <tr *ngFor="let q of quotes">-->
+  <!--    <td>{{q.id}}</td>-->
+  <!--    <td>{{q.quoteText}}</td>-->
+  <!--  </tr>-->
+  <!--</table>-->
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="quoteText">
+      <th mat-header-cell *matHeaderCellDef> Quote Text</th>
+      <td mat-cell *matCellDef="let element"> {{element.quoteText}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="quoteNarrator">
+      <th mat-header-cell *matHeaderCellDef> Quote Narrator</th>
+      <td mat-cell *matCellDef="let element"> {{element.quoteNarrator}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

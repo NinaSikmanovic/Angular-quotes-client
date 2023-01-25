@@ -12,6 +12,10 @@ import { MatButtonModule} from "@angular/material/button";
 import { HomeComponent } from './components/home/home.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { LogInComponent } from './components/log-in/log-in.component';
+import {FormsModule} from "@angular/forms";
+import {MatTableModule} from "@angular/material/table";
+import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { LogInComponent } from './components/log-in/log-in.component';
     AppRoutingModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

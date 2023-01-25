@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./quote.component.scss']
 })
 export class QuoteComponent {
-
+  save(){
+    alert('Save quote')
+  }
 }
