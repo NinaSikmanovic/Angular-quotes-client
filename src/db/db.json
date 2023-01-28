@@ -1,0 +1,14 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "quoteText": "Text1",
+      "quoteNarrator": "Narr1"
+    },
+    {
+      "id": 2,
+      "quoteText": "Text2",
+      "quoteNarrator": "Narr2"
+    }
+  ]
+}
