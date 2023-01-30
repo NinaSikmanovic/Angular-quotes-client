@@ -10,7 +10,7 @@ import {QuoteService} from "../../services/quote.service";
 
 
 export class QuotesListComponent {
-  // username: string = 'nikolina';
+  username: string = 'nikolina';
   quotes: Quote[] = [];
   displayedColumns: string[] = ['id', 'quoteText', 'quoteNarrator'];
   dataSource: Quote[] = [];
@@ -19,14 +19,11 @@ export class QuotesListComponent {
   constructor(private QuoteService: QuoteService) {
   }
 
+
   ngOnInit(): void {
-  //   // this.quotes = [
-  //   //   {id: 1, quoteText: 'FirstQuote', quoteNarrator: 'Narr1'},
-  //   //   {id: 2, quoteText: 'SecondQuote', quoteNarrator: 'Narr2'}
-  //   // ];
-  //
     this.QuoteService.getAllQuotes().subscribe(data => {
       this.quotes = data;
+      debugger
       this.dataSource = this.quotes;
     })
   }
