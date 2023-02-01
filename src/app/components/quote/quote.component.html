@@ -1,5 +1,7 @@
 <div class="quote padding-tb-24">
-  <h2>Insert / Edit quote</h2>
+  <div *ngIf="isEditPage; then edit else add"></div>
+  <ng-template #edit><h1>Edit quote</h1></ng-template>
+  <ng-template #add><h1>Add a quote</h1></ng-template>
 
   <div>
     <mat-form-field>
@@ -11,7 +13,6 @@
       <input matInput type="text" placeholder="Quote Narrator" [(ngModel)]="quote.quoteNarrator">
     </mat-form-field>
   </div>
-
   <button mat-button class="button-color" (click)="save()">Save</button>
 </div>
 

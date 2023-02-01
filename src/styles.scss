@@ -1,12 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
 
-.padding-tb-24{
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.padding-tb-24 {
   padding: 24px 0;
 }
 
-.button-color{
+.button-color {
   background-color: #4a4a4a !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

@@ -16,19 +16,18 @@ export class QuoteService {
   }
 
   getQuoteById(id: number): Observable<Quote>{
-    return this.http.get<Quote>('/quotes/${id}');
+    return this.http.get<Quote>('/quotes/'+id);
   }
 
   insertQuote(quote: any): Observable<any>{
-    debugger
     return this.http.post<any>('/quotes', quote);
   }
 
   updateQuote(quote: any): Observable<any>{
-    return this.http.put('/quotes', quote);
+    return this.http.put<any>('/quotes/'+ quote.id, quote);
   }
 
   deleteQuote(id: number): Observable<any>{
-    return this.http.delete('/quotes/${id}');
+    return this.http.delete('/quotes/'+ id);
   }
 }

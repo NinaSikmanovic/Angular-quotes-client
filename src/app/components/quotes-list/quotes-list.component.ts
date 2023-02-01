@@ -12,19 +12,23 @@ import {QuoteService} from "../../services/quote.service";
 export class QuotesListComponent {
   username: string = 'nikolina';
   quotes: Quote[] = [];
-  displayedColumns: string[] = ['id', 'quoteText', 'quoteNarrator'];
+  displayedColumns: string[] = ['id', 'quoteText', 'quoteNarrator', 'delete', 'edit'];
   dataSource: Quote[] = [];
-
 
   constructor(private QuoteService: QuoteService) {
   }
 
-
   ngOnInit(): void {
     this.QuoteService.getAllQuotes().subscribe(data => {
       this.quotes = data;
-      debugger
       this.dataSource = this.quotes;
     })
   }
+
+  delete(id: number){
+    this.QuoteService.deleteQuote(id).subscribe(data => {
+      this.ngOnInit();
+    })
+  }
+
 }
